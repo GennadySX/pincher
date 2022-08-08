@@ -1,6 +1,6 @@
 {
   "name": "@gennadysx/react-native-pincher",
-  "version": "1.2.5",
+  "version": "1.2.7",
   "description": "React Native view for image component",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -33,7 +33,13 @@
   "keywords": [
     "react-native",
     "ios",
-    "android"
+    "android",
+    "pincher",
+    "zoom",
+    "gesture",
+    "image",
+    "image-picker",
+    "GennadySX"
   ],
   "repository": "https://github.com/gennadysx/pincher",
   "author": "Gennady Sabirovsky <the@gennadysx.com> (https://gennadysx.com)",
