@@ -5,6 +5,9 @@ supports **TurboModules**.
 ****
 
 
+![Alt Text](./example/example.gif)
+
+
 ## Installation
 
 ```sh
@@ -20,6 +23,7 @@ import { PincherView } from '@gennadysx/react-native-pincher';
   <Image source={...}> // or any other view
 </PincherView>
 ```
+
 
 ## License
 
