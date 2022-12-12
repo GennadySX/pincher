@@ -26,8 +26,7 @@ UIView *backgroundView;
   if ((self = [super initWithFrame:frame])) {
     _minimumZoomScale = 1.0;
     _maximumZoomScale = 3.0;
-    [self resetGestureState];
-    [self setupGesture];
+    _animateDuration = 0.2;
   }
   return self;
 }
@@ -122,7 +121,7 @@ UIView *backgroundView;
 
   if (gestureRecognizer.state == UIGestureRecognizerStateEnded ||
       gestureRecognizer.state == UIGestureRecognizerStateCancelled) {
-    [UIView animateWithDuration:0.4 delay:0. usingSpringWithDamping:1 initialSpringVelocity:.6 options:0 animations:^{
+    [UIView animateWithDuration:_animateDuration delay:0. usingSpringWithDamping:1 initialSpringVelocity:.6 options:0 animations:^{
       gestureRecognizer.view.transform = CGAffineTransformIdentity;
       backgroundView.layer.opacity = 0.;
     } completion:^(BOOL finished) {

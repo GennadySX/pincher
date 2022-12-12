@@ -13,6 +13,7 @@ public class PincherViewManager extends ViewGroupManager<PincherView> {
     private static final String REACT_CLASS = "PincherView";
     private static final float defaultMinimumZoomScale = 1.0f;
     private static final float defaultMaximumZoomScale = 3.0f;
+    private static final int defaultAnimateDuration = 400;
 
     ReactApplicationContext mCallerContext;
 
@@ -39,5 +40,10 @@ public class PincherViewManager extends ViewGroupManager<PincherView> {
     @ReactProp(name = "maximumZoomScale", defaultFloat = defaultMaximumZoomScale)
     public void setMaximumZoomScale(PincherView view, float maximumZoomScale) {
         view.setMaximumZoomScale(maximumZoomScale);
+    }
+
+    @ReactProp(name = "animateDuration", defaultInt = defaultAnimateDuration)
+    public void setAnimateDuration(PincherView view, int animateDuration) {
+        view.setAnimateDuration(animateDuration);
     }
 }
