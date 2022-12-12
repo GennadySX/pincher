@@ -20,7 +20,7 @@ import android.view.animation.DecelerateInterpolator;
 import com.facebook.react.views.view.ReactViewGroup;
 
 public class PincherView extends ReactViewGroup implements OnTouchListener {
-    private final int animationDuration = 400;
+    private int animationDuration = 200;
     private float minScale = 1f;
     private float maxScale = 3f;
     private boolean active = false;
@@ -203,6 +203,10 @@ public class PincherView extends ReactViewGroup implements OnTouchListener {
 
     public void setMaximumZoomScale(float maximumZoomScale) {
         maxScale = maximumZoomScale;
+    }
+
+    public void setAnimateDuration(int duration) {
+        animationDuration = duration;
     }
 
     public void setActiveFalse(boolean activeState) {

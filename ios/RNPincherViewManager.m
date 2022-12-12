@@ -21,5 +21,6 @@ RCT_EXPORT_MODULE(PincherView)
 
 RCT_EXPORT_VIEW_PROPERTY(minimumZoomScale, CGFloat);
 RCT_EXPORT_VIEW_PROPERTY(maximumZoomScale, CGFloat);
+RCT_EXPORT_VIEW_PROPERTY(animateDuration, CGFloat);
 
 @end

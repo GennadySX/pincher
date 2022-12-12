@@ -1,6 +1,6 @@
 {
   "name": "@gennadysx/react-native-pincher",
-  "version": "1.2.8",
+  "version": "1.3.1",
   "description": "React Native view for image component",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
