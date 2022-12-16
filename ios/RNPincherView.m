@@ -121,9 +121,9 @@ UIView *backgroundView;
 
   if (gestureRecognizer.state == UIGestureRecognizerStateEnded ||
       gestureRecognizer.state == UIGestureRecognizerStateCancelled) {
-    [UIView animateWithDuration:_animateDuration delay:0. usingSpringWithDamping:1 initialSpringVelocity:.6 options:0 animations:^{
+    [UIView animateWithDuration:0.5 delay:0. usingSpringWithDamping:1 initialSpringVelocity:.6 options:0 animations:^{
       gestureRecognizer.view.transform = CGAffineTransformIdentity;
-      backgroundView.layer.opacity = 0.;
+      backgroundView.layer.opacity = 0.1;
     } completion:^(BOOL finished) {
       [backgroundView removeFromSuperview];
       [initialSuperView insertSubview:view atIndex:initialIndex];
