@@ -20,7 +20,7 @@ import android.view.animation.DecelerateInterpolator;
 import com.facebook.react.views.view.ReactViewGroup;
 
 public class PincherView extends ReactViewGroup implements OnTouchListener {
-    private int animationDuration = 200;
+    private int animationDuration = 1200;
     private float minScale = 1f;
     private float maxScale = 3f;
     private boolean active = false;
@@ -127,7 +127,7 @@ public class PincherView extends ReactViewGroup implements OnTouchListener {
             backdrop = new ColorDrawable(Color.BLACK);
             backdrop.setAlpha(0);
             backdrop.setBounds(0, 0, rootView.getWidth(), rootView.getHeight());
-            rootView.getOverlay().add(backdrop);
+            //rootView.getOverlay().add(backdrop);
         }
 
         v.getLocationInWindow(sourceLocation);
@@ -179,8 +179,9 @@ public class PincherView extends ReactViewGroup implements OnTouchListener {
                 endAnimation();
             }
         });
-        animator.start();
-        currentAnimator = animator;
+        //animator.start();
+        //currentAnimator = animator;
+           endAnimation();
     }
 
     private void endAnimation() {
@@ -190,10 +191,10 @@ public class PincherView extends ReactViewGroup implements OnTouchListener {
             rootView.getOverlay().remove(backdrop);
             backdrop = null;
         }
-        if (clone != null) {
+       // if (clone != null) {
             rootView.getOverlay().remove(clone);
             clone = null;
-        }
+        //}
         setVisibility(View.VISIBLE);
     }
 
